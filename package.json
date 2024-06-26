@@ -3,10 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+		"check": "pnpm check.format && pnpm check.types",
+		"check.format": "biome check --error-on-warnings .",
+		"fmt": "biome check . --apply",
+		"check.types": "tsc",
+		"dev": "(sleep 1 && open http://localhost:3000) & pnpm dev-",
+		"dev-": "next dev --turbo --port 3000",
+    "docker": "pnpm docker.build && pnpm docker.run",
+		"docker+": "pnpm docker.build && ((sleep 2 && open http://localhost:3000) & pnpm docker.run)",
+		"docker.build": "docker buildx build --file ./Dockerfile --tag ur-disc-friend:latest .",
+		"docker.run": "docker run --rm --interactive --tty --net=host --env PORT=3000 --env-file .env --name ur-disc-friend ur-disc-friend:latest"
   },
   "dependencies": {
     "react": "^18",

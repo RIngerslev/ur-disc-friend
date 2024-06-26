@@ -9,7 +9,7 @@ node_modules/
 .editorconfig
 .npmrc
 .nvmrc
-biome.json
+#biome.json
 
 # Git
 .git/
@@ -28,4 +28,4 @@ biome.json
 Thumbs.db
 
 # Terraform
-terraform/
+#terraform/
