@@ -35,7 +35,7 @@ COPY --from=build /app/package.json .
 COPY --from=build /app/pnpm-lock.yaml .
 
 # Installer kun produktion afhængigheder med PNPM
-RUN pnpm install --prod
+RUN pnpm install
 
 # Angiv porten, som appen skal køre på
 EXPOSE 3000
