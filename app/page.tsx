@@ -1,6 +1,4 @@
 "use client"
-import { useState } from "react";
-import NavBar from "./navBar";
 import Link from "next/link";
 import Image from "next/image";
 import Finger from "../public/finger-click-svgrepo-com.svg"
