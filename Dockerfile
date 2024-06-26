@@ -29,7 +29,6 @@ RUN corepack enable pnpm
 WORKDIR /app
 
 # Kopier kun de nødvendige filer fra den første fase (build)
-COPY .env ./
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/public ./public
 COPY --from=build /app/package.json .
