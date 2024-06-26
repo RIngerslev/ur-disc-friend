@@ -1,0 +1,31 @@
+# Exclude non-production files for the Next.js app from the Docker build context.
+# https://docs.docker.com/engine/reference/builder/#dockerignore-file
+
+# Development tools and IDEs
+.idea/
+.vscode/
+node_modules/
+*.md
+.editorconfig
+.npmrc
+.nvmrc
+biome.json
+
+# Git
+.git/
+.gitattributes
+.gitignore
+
+# GitHub Actions
+.github/
+
+# Next.js
+.next/
+
+# Operating system artifacts
+*~
+.DS_Store
+Thumbs.db
+
+# Terraform
+terraform/
